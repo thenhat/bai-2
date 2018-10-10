@@ -25,16 +25,22 @@ float tinhluong13(int namkinhnghiem, int namlamviec) {
 }
 
 int main() {
+    char a;
     int namkinhnghiem, namconghien;
-    printf("Nhap so nam kinh nghiem cua ban: ");
-    scanf("%d", &namkinhnghiem);
-    printf("Nhap so nam lam viec cho cong ty: ");
-    scanf("%d", &namconghien);
-    if (namkinhnghiem < 0 || namconghien < 0) {
-        printf("nhap sai");
-    } else {
-        printf("luong thang 13 la: %.2f trieu\n", tinhluong13(namkinhnghiem, namconghien));
-        printf("_____________________________________");
-    }
+    do {
+        printf("Nhap so nam kinh nghiem cua ban: ");
+        scanf("%d", &namkinhnghiem);
+        printf("Nhap so nam lam viec cho cong ty: ");
+        scanf("%d", &namconghien);
+        if (namkinhnghiem < 0 || namconghien < 0) {
+            printf("nhap sai");
+        } else {
+            printf("luong thang 13 la: %.2f trieu\n", tinhluong13(namkinhnghiem, namconghien));
+            printf("_____________________________________\n");
+        }
+        printf("ban muon tiep tuc ko?");
+    } while (a=='n'||a=='N');
+        exit;
+
     return 0;
 }
